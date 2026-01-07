@@ -29,11 +29,11 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 __Install dependencies__
 pip install -r requirements.txt
 
-## Database setup
+__Database setup__
 python manage.py migrate
 python manage.py createsuperuser
 
-## Run development server
+__Run development server__
 python manage.py runserver
 
 
