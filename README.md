@@ -18,15 +18,15 @@ Full-stack Django-powered e-learning platform with user authentication, course m
 
 ## Installation (Development)
 
-## Clone repository
+__Clone repository__
 git clone https://github.com/Bhushanmali021/E-Learning-Platform.git
 cd E-Learning-Platform
 
-## Create virtual environment
+__Create virtual environment__
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-## Install dependencies
+__Install dependencies__
 pip install -r requirements.txt
 
 ## Database setup
@@ -36,23 +36,10 @@ python manage.py createsuperuser
 ## Run development server
 python manage.py runserver
 
-##  Project Structure
 
-E-Learning-Platform/
-├── core/                 # Main Django app
-│   ├── models.py        # User, Course, Enrollment models
-│   ├── views.py         # Business logic
-│   ├── forms.py         # Custom forms
-│   ├── templates/       # HTML templates
-│   └── admin.py         # Admin configuration
-├── static/              # CSS, JS, Images
-├── media/               # User uploads
-├── requirements.txt     # Python dependencies
-├── manage.py
-└── README.md
 
 ## Key Django Features Implemented
-## 1. Custom User Model
+__1. Custom User Model__
 
 ## models.py
 class UserProfile(AbstractUser):
@@ -74,8 +61,8 @@ class Enrollment(models.Model):
     is_completed = models.BooleanField(default=False)
 
 ## 💻 Developer Features
-## Django Admin Customization
-## admin.py
+__Django Admin Customization__
+__admin.py__
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
     list_display = ['title', 'price', 'discount_price', 'is_published']
@@ -88,7 +75,7 @@ class CourseAdmin(admin.ModelAdmin):
 Price: ${{ final_price }}
 
 ## 📊 Data Domain Integration Points
-## Analytics Ready Models
+__Analytics Ready Models__
 📈 Enrollment Analytics: Completion rates, user progress
 💰 Revenue Tracking: Course sales, discounts applied
 👥 User Segmentation: Students vs Instructors
@@ -111,17 +98,17 @@ Price: ${{ final_price }}
 ✅ HTTPS enforcement
 
 ##  🌐 API Endpoints (Future Expansion)
-## DRF Ready Structure
+__DRF Ready Structure__
 GET    /api/courses/           # List courses
 POST   /api/enrollments/       # Enroll user
 GET    /api/user/courses/      # User enrolled courses
 GET    /api/analytics/         # Dashboard stats
 
 ## 🧪 Testing Strategy
-# Run tests
+__Run tests__
 python manage.py test core.tests
 
-** Coverage **
+__Coverage__
 pip install coverage
 coverage run manage.py test
 coverage report
